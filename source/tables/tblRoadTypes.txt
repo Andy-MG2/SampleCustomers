@@ -1,0 +1,12 @@
+﻿Type	RoadNum
+Ave.	6
+Blvd.	4
+Hl.	11
+Ln.	5
+Mt.	10
+Pl.	2
+Plz.	9
+Rd.	1
+Sq.	7
+St.	3
+Ter.	8

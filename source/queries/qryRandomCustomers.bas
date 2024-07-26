@@ -18,8 +18,7 @@ Begin OutputColumns
         "Rnd([Num])*11))"
     Alias ="Expr1"
     Name ="City"
-    Expression ="DLookUp(\"City\",\"qTest\",\"RowID=\" & Int(Rnd([Num])*DLookUp(\"CountOfField\","
-        "\"qryCitiesCount\",\"State=\" & [State])))"
+    Expression ="GenCity([State],[Num])"
     Name ="State"
     Expression ="tblTempCustomers.State"
     Alias ="Expr6"
@@ -50,6 +49,8 @@ Begin
     Begin
         dbText "Name" ="Expr1"
         dbLong "AggregateType" ="-1"
+        dbInteger "ColumnWidth" ="2010"
+        dbBoolean "ColumnHidden" ="0"
     End
     Begin
         dbText "Name" ="tblNumbers.*"
@@ -99,17 +100,21 @@ Begin
         dbText "Name" ="tblTempCustomers.State"
         dbLong "AggregateType" ="-1"
     End
+    Begin
+        dbText "Name" ="City"
+        dbLong "AggregateType" ="-1"
+    End
 End
 Begin
     State =0
     Left =0
     Top =0
-    Right =1065
+    Right =1053
     Bottom =752
     Left =-1
     Top =-1
-    Right =1049
-    Bottom =133
+    Right =1037
+    Bottom =-1
     Left =0
     Top =0
     ColumnsShown =651

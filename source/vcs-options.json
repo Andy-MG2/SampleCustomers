@@ -45,16 +45,19 @@
       "tblCensus": {
         "Format": "Tab Delimited"
       },
-      "tblCustomers": {
+      "tblNames": {
         "Format": "Tab Delimited"
       },
-      "tblNames": {
+      "tblNumbers": {
+        "Format": "Tab Delimited"
+      },
+      "tblRoadTypes": {
         "Format": "Tab Delimited"
       },
       "tblStates": {
         "Format": "Tab Delimited"
       },
-      "tblTransactions": {
+      "tblStatesCities": {
         "Format": "Tab Delimited"
       },
       "USysRegInfo": {

@@ -4,4 +4,4 @@
   tblStates.StateNum
 FROM
   tblStates
-  INNER JOIN tblCensus ON tblStates.StateFull = tblCensus.State;
+  INNER JOIN tblCensus ON tblStates.StateFull = tblCensus.[StateFull];

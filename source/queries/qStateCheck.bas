@@ -12,7 +12,7 @@ End
 Begin Joins
     LeftTable ="tblStates"
     RightTable ="tblCensus"
-    Expression ="tblStates.StateFull = tblCensus.State"
+    Expression ="tblStates.StateFull = tblCensus.[StateFull]"
     Flag =1
 End
 dbBoolean "ReturnsRecords" ="-1"
@@ -42,12 +42,12 @@ Begin
     State =0
     Left =0
     Top =0
-    Right =1034
+    Right =1065
     Bottom =752
     Left =-1
     Top =-1
-    Right =1018
-    Bottom =169
+    Right =1049
+    Bottom =135
     Left =0
     Top =0
     ColumnsShown =539

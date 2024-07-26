@@ -14,7 +14,7 @@ Begin OutputColumns
     Expression ="DLookUp(\"Name\",\"tblNames\",\"NameNum=\" & Int(Rnd([Num])*9999))"
     Alias ="Expr3"
     Name ="State"
-    Expression ="DLookUp(\"StateFull\",\"qStateCheck\",\"StateNum=\" & Int(Rnd([Num])*51))"
+    Expression ="DLookUp(\"State\",\"qStateCheck\",\"StateNum=\" & Int(Rnd([Num])*51))"
 End
 dbBoolean "ReturnsRecords" ="-1"
 dbInteger "ODBCTimeout" ="60"
@@ -68,12 +68,12 @@ Begin
     State =0
     Left =0
     Top =0
-    Right =1065
+    Right =1053
     Bottom =752
     Left =-1
     Top =-1
-    Right =1049
-    Bottom =354
+    Right =1037
+    Bottom =269
     Left =0
     Top =0
     ColumnsShown =651

@@ -9,7 +9,7 @@
   [Field7] LONG,
   [Field8] VARCHAR (255),
   [City] VARCHAR (255),
-  [State] VARCHAR (255),
+  [StateFull] VARCHAR (255),
   [Field11] LONG,
   [Field12] LONG,
   [Field13] LONG,

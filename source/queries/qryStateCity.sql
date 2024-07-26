@@ -1,11 +1,14 @@
 ﻿SELECT
   DISTINCT tblCensus.City,
-  tblCensus.State
+  tblCensus.StateFull,
+  tblStates.State
 FROM
-  tblCensus
+  tblStates
+  INNER JOIN tblCensus ON tblStates.StateFull = tblCensus.StateFull
 GROUP BY
   tblCensus.City,
-  tblCensus.State
+  tblCensus.StateFull,
+  tblStates.State
 HAVING
   (
     (
@@ -13,4 +16,4 @@ HAVING
     )
   )
 ORDER BY
-  tblCensus.State;
+  tblCensus.StateFull;

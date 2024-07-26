@@ -20,9 +20,7 @@ SELECT
       Rnd([Num])* 11
     )
   ) AS Expr3,
-  DLookUp(
-    "City", "tblCensus", "State='" & [tblTempCustomers].[State] & "'"
-  ) AS Expr4,
+  GenCity([State], [Num]) AS Expr1,
   tblTempCustomers.State,
   Mid(
     Int(

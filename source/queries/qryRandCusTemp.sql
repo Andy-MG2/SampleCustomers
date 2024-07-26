@@ -15,7 +15,7 @@ SELECT
     )
   ) AS Expr2,
   DLookUp(
-    "StateFull",
+    "State",
     "qStateCheck",
     "StateNum=" & Int(
       Rnd([Num])* 51
