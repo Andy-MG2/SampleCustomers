@@ -19,6 +19,10 @@ dbInteger "ODBCTimeout" ="60"
 dbBoolean "UseTransaction" ="-1"
 dbBoolean "FailOnError" ="0"
 dbByte "Orientation" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "DefaultView" ="2"
+dbBoolean "FilterOnLoad" ="0"
+dbBoolean "OrderByOnLoad" ="-1"
 Begin
     Begin
         dbText "Name" ="tblStates.State"
@@ -33,12 +37,12 @@ Begin
     State =0
     Left =0
     Top =0
-    Right =153
-    Bottom =750
+    Right =1065
+    Bottom =752
     Left =-1
     Top =-1
-    Right =137
-    Bottom =507
+    Right =1049
+    Bottom =439
     Left =0
     Top =0
     ColumnsShown =579
@@ -52,10 +56,10 @@ Begin
         Name =""
     End
     Begin
-        Left =325
-        Top =77
-        Right =469
-        Bottom =221
+        Left =319
+        Top =106
+        Right =463
+        Bottom =250
         Top =0
         Name ="tblStates"
         Name =""
