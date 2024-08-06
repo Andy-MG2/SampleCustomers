@@ -8,7 +8,6 @@
   tblTransactions.TDate,
   tblCustomers.Address,
   tblCustomers.City,
-  tblCustomers.City,
   tblCustomers.State,
   tblCustomers.Zip
 FROM

@@ -1,46 +1,23 @@
-﻿Operation =3
-Name ="tblCustomers"
-Option =16
-RowCount ="5"
-Begin InputTables
-    Name ="tblTempCustomers"
-    Name ="tblNumbers"
-End
-Begin OutputColumns
-    Name ="CustomerName"
-    Expression ="tblTempCustomers.cName"
-    Name ="CustomerLName"
-    Expression ="tblTempCustomers.cLName"
-    Alias ="Expr3"
-    Name ="Address"
-    Expression ="Int(Rnd([Num])*999) & \" \" & DLookUp(\"Name\",\"tblNames\",\"NameNum=\" & Int(R"
-        "nd([Num])*9999)) & \" \" & DLookUp(\"Type\",\"tblRoadTypes\",\"RoadNum=\" & Int("
-        "Rnd([Num])*11))"
-    Alias ="Expr1"
-    Name ="City"
-    Expression ="GenCity([State],[Num])"
-    Name ="State"
-    Expression ="tblTempCustomers.State"
-    Alias ="Expr6"
-    Name ="Zip"
-    Expression ="Mid(Int(Rnd([Num])*999999),1,5)"
-    Alias ="Expr7"
-    Name ="Email"
-    Expression ="[cName] & Mid$([cLName],1,2) & \"@gmail.com\""
-    Alias ="Expr8"
-    Name ="Phone"
-    Expression ="Mid(Int(Rnd([Num])*99999999999),1,10)"
-End
-Begin Joins
-    LeftTable ="tblTempCustomers"
-    RightTable ="tblNumbers"
-    Expression ="tblTempCustomers.ID = tblNumbers.Num"
-    Flag =1
-End
+﻿dbMemo "SQL" ="INSERT INTO tblCustomers ( CustomerName, CustomerLName, Address, City, State, Zi"
+    "p, Email, Phone )\015\012SELECT tblTempCustomers.cName, tblTempCustomers.cLName,"
+    " Int(Rnd([Num])*999) & \" \" & DLookUp(\"Name\",\"tblNames\",\"NameNum=\" & Int("
+    "Rnd([Num])*9999)) & \" \" & DLookUp(\"Type\",\"tblRoadTypes\",\"RoadNum=\" & Int"
+    "(Rnd([Num])*11)) AS Expr3, DLookUp(\"City\",\"tblCensus\",\"ID=\" & [tbltempCust"
+    "omers.CensusNum]) AS Expr1, DLookUp(\"State\",\"tblCensus\",\"ID=\" & [tbltempCu"
+    "stomers.CensusNum]) AS Expr2, Mid(Int(Rnd([Num])*999999),1,5) AS Expr6, [cName] "
+    "& Mid$([cLName],1,2) & \"@gmail.com\" AS Expr7, Mid(Int(Rnd([Num])*99999999999),"
+    "1,10) AS Expr8\015\012FROM tblTempCustomers INNER JOIN tblNumbers ON tblTempCust"
+    "omers.ID = tblNumbers.Num\015\012WHERE (((DLookUp(\"City\",\"tblCensus\",\"ID=\""
+    " & [tbltempCustomers.CensusNum]))<>\"Balance of\" & \" AND NAME\"));\015\012"
+dbMemo "Connect" =""
 dbBoolean "ReturnsRecords" ="-1"
 dbInteger "ODBCTimeout" ="60"
 dbBoolean "UseTransaction" ="-1"
 dbByte "Orientation" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "DefaultView" ="2"
+dbBoolean "FilterOnLoad" ="0"
+dbBoolean "OrderByOnLoad" ="-1"
 Begin
     Begin
         dbText "Name" ="tblNumbers.Num"
@@ -103,37 +80,5 @@ Begin
     Begin
         dbText "Name" ="City"
         dbLong "AggregateType" ="-1"
-    End
-End
-Begin
-    State =0
-    Left =0
-    Top =0
-    Right =1053
-    Bottom =752
-    Left =-1
-    Top =-1
-    Right =1037
-    Bottom =-1
-    Left =0
-    Top =0
-    ColumnsShown =651
-    Begin
-        Left =126
-        Top =89
-        Right =270
-        Bottom =233
-        Top =0
-        Name ="tblTempCustomers"
-        Name =""
-    End
-    Begin
-        Left =311
-        Top =89
-        Right =455
-        Bottom =233
-        Top =0
-        Name ="tblNumbers"
-        Name =""
     End
 End

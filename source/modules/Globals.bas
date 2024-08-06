@@ -3,15 +3,17 @@ Option Compare Database
 Option Explicit
 
 Public Function GenCity(State As String, Num As Integer)
-
-    Dim cityNum As Integer
     Dim cityValue As String
+    Dim cityNum As Integer
+    Dim idNum As Integer
 
-    ' Get the count of cities for the given state
-    cityNum = DLookup("CountOfCity", "qryCitiesCount", "State='" & State & "'")
+    'Gets the ID of the first intance of the state"
+    'idNum = DMin("ID", "tblCensus", "State= '" & State & "'")
+    'Get the count of cities for the given state
+    'cityNum = DLookup("CountOfCity", "qryCitiesCount", "State= '" & State & "'")
 
     ' Get a random city value for the given state
-    cityValue = DLookup("City", "qryStateCityNumbered", "State='" & State & "' AND RowID=" & Int(Rnd(Num) * cityNum))
+    'cityValue = DLookup("City", "tblCensus", "State='" & State & "' AND ID=" & Int(Rnd(Num) * (cityNum + idNum)))
 
     'Output debugging information
     Debug.Print "State: " & State & ", Random City: " & cityValue

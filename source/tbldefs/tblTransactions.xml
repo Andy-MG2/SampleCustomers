@@ -119,7 +119,7 @@
         <xsd:element name="TDate" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime">
           <xsd:annotation>
             <xsd:appinfo>
-              <od:fieldProperty name="ColumnWidth" type="3" value="2250"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="2355"></od:fieldProperty>
               <od:fieldProperty name="ColumnOrder" type="3" value="6"></od:fieldProperty>
               <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
               <od:fieldProperty name="Format" type="10" value="General Date"></od:fieldProperty>

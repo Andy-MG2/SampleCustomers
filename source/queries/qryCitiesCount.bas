@@ -1,27 +1,27 @@
 ﻿Operation =1
 Option =0
 Begin InputTables
-    Name ="qryStateCity"
     Name ="tblStates"
+    Name ="tblCensus"
 End
 Begin OutputColumns
     Alias ="CountOfCity"
-    Expression ="Count(qryStateCity.City)"
-    Expression ="qryStateCity.StateFull"
+    Expression ="Count(tblCensus.City)"
+    Expression ="tblCensus.StateFull"
     Expression ="tblStates.State"
 End
 Begin Joins
-    LeftTable ="tblStates"
-    RightTable ="qryStateCity"
-    Expression ="tblStates.StateFull = qryStateCity.StateFull"
+    LeftTable ="tblCensus"
+    RightTable ="tblStates"
+    Expression ="tblCensus.StateFull = tblStates.StateFull"
     Flag =1
 End
 Begin OrderBy
-    Expression ="qryStateCity.StateFull"
+    Expression ="tblCensus.StateFull"
     Flag =0
 End
 Begin Groups
-    Expression ="qryStateCity.StateFull"
+    Expression ="tblCensus.StateFull"
     GroupLevel =0
     Expression ="tblStates.State"
     GroupLevel =0
@@ -45,7 +45,7 @@ Begin
         dbLong "AggregateType" ="-1"
     End
     Begin
-        dbText "Name" ="qryStateCity.StateFull"
+        dbText "Name" ="tblCensus.StateFull"
         dbLong "AggregateType" ="-1"
     End
 End
@@ -58,19 +58,10 @@ Begin
     Left =-1
     Top =-1
     Right =1049
-    Bottom =159
+    Bottom =401
     Left =0
     Top =0
     ColumnsShown =543
-    Begin
-        Left =116
-        Top =28
-        Right =260
-        Bottom =149
-        Top =0
-        Name ="qryStateCity"
-        Name =""
-    End
     Begin
         Left =413
         Top =18
@@ -78,6 +69,15 @@ Begin
         Bottom =162
         Top =0
         Name ="tblStates"
+        Name =""
+    End
+    Begin
+        Left =211
+        Top =75
+        Right =355
+        Bottom =335
+        Top =0
+        Name ="tblCensus"
         Name =""
     End
 End

@@ -37,7 +37,7 @@
         <xsd:element name="ID" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int">
           <xsd:annotation>
             <xsd:appinfo>
-              <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
+              <od:fieldProperty name="ColumnOrder" type="3" value="1"></od:fieldProperty>
               <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
               <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
               <od:fieldProperty name="TextAlign" type="2" value="0"></od:fieldProperty>
@@ -50,7 +50,7 @@
         <xsd:element name="StateFull" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:annotation>
             <xsd:appinfo>
-              <od:fieldProperty name="ColumnWidth" type="3" value="-1"></od:fieldProperty>
+              <od:fieldProperty name="ColumnWidth" type="3" value="2010"></od:fieldProperty>
               <od:fieldProperty name="ColumnOrder" type="3" value="0"></od:fieldProperty>
               <od:fieldProperty name="ColumnHidden" type="1" value="0"></od:fieldProperty>
               <od:fieldProperty name="Required" type="1" value="0"></od:fieldProperty>

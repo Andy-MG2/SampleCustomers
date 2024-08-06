@@ -1,7 +1,6 @@
 ﻿Operation =3
 Name ="tblTempCustomers"
-Option =16
-RowCount ="5"
+Option =0
 Begin InputTables
     Name ="tblNumbers"
 End
@@ -13,8 +12,8 @@ Begin OutputColumns
     Name ="cLName"
     Expression ="DLookUp(\"Name\",\"tblNames\",\"NameNum=\" & Int(Rnd([Num])*9999))"
     Alias ="Expr3"
-    Name ="State"
-    Expression ="DLookUp(\"State\",\"qStateCheck\",\"StateNum=\" & Int(Rnd([Num])*51))"
+    Name ="CensusNum"
+    Expression ="Int(Rnd([Num])*81371)"
 End
 dbBoolean "ReturnsRecords" ="-1"
 dbInteger "ODBCTimeout" ="60"
@@ -68,20 +67,20 @@ Begin
     State =0
     Left =0
     Top =0
-    Right =1053
+    Right =1065
     Bottom =752
     Left =-1
     Top =-1
-    Right =1037
-    Bottom =269
+    Right =1049
+    Bottom =201
     Left =0
-    Top =0
+    Top =96
     ColumnsShown =651
     Begin
         Left =290
-        Top =163
+        Top =67
         Right =434
-        Bottom =307
+        Bottom =211
         Top =0
         Name ="tblNumbers"
         Name =""

@@ -15,7 +15,6 @@ Begin OutputColumns
     Expression ="tblTransactions.TDate"
     Expression ="tblCustomers.Address"
     Expression ="tblCustomers.City"
-    Expression ="tblCustomers.City"
     Expression ="tblCustomers.State"
     Expression ="tblCustomers.Zip"
 End
@@ -62,7 +61,7 @@ Begin
     Begin
         dbText "Name" ="tblTransactions.TDate"
         dbLong "AggregateType" ="-1"
-        dbInteger "ColumnWidth" ="2250"
+        dbInteger "ColumnWidth" ="2340"
         dbBoolean "ColumnHidden" ="0"
     End
     Begin
@@ -72,6 +71,8 @@ Begin
     Begin
         dbText "Name" ="tblCustomers.City"
         dbLong "AggregateType" ="-1"
+        dbInteger "ColumnWidth" ="2685"
+        dbBoolean "ColumnHidden" ="0"
     End
     Begin
         dbText "Name" ="tblCustomers.State"
@@ -82,7 +83,27 @@ Begin
         dbLong "AggregateType" ="-1"
     End
     Begin
+        dbText "Name" ="Total"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
         dbText "Name" ="Expr1008"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="Subtotal"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="Tax"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="ID"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="TDate"
         dbLong "AggregateType" ="-1"
     End
 End
@@ -90,12 +111,12 @@ Begin
     State =0
     Left =0
     Top =0
-    Right =1034
+    Right =682
     Bottom =752
     Left =-1
     Top =-1
-    Right =1018
-    Bottom =422
+    Right =666
+    Bottom =388
     Left =0
     Top =0
     ColumnsShown =539

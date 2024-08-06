@@ -1,6 +1,6 @@
-﻿INSERT INTO tblTempCustomers (cName, cLName, State)
+﻿INSERT INTO tblTempCustomers (cName, cLName, CensusNum)
 SELECT
-  TOP 5 DLookUp(
+  DLookUp(
     "Name",
     "tblNames",
     "NameNum=" & Int(
@@ -14,12 +14,8 @@ SELECT
       Rnd([Num])* 9999
     )
   ) AS Expr2,
-  DLookUp(
-    "State",
-    "qStateCheck",
-    "StateNum=" & Int(
-      Rnd([Num])* 51
-    )
+  Int(
+    Rnd([Num])* 81371
   ) AS Expr3
 FROM
   tblNumbers;

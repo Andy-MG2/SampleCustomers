@@ -1,12 +1,12 @@
 ﻿SELECT
-  Count(qryStateCity.City) AS CountOfCity,
-  qryStateCity.StateFull,
+  Count(tblCensus.City) AS CountOfCity,
+  tblCensus.StateFull,
   tblStates.State
 FROM
-  tblStates
-  INNER JOIN qryStateCity ON tblStates.StateFull = qryStateCity.StateFull
+  tblCensus
+  INNER JOIN tblStates ON tblCensus.StateFull = tblStates.StateFull
 GROUP BY
-  qryStateCity.StateFull,
+  tblCensus.StateFull,
   tblStates.State
 ORDER BY
-  qryStateCity.StateFull;
+  tblCensus.StateFull;

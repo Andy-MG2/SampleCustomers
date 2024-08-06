@@ -3,7 +3,7 @@
   City, State, Zip, Email, Phone
 )
 SELECT
-  TOP 5 tblTempCustomers.cName,
+  tblTempCustomers.cName,
   tblTempCustomers.cLName,
   Int(
     Rnd([Num])* 999
@@ -20,8 +20,12 @@ SELECT
       Rnd([Num])* 11
     )
   ) AS Expr3,
-  GenCity([State], [Num]) AS Expr1,
-  tblTempCustomers.State,
+  DLookUp(
+    "City", "tblCensus", "ID=" & [tbltempCustomers.CensusNum]
+  ) AS Expr1,
+  DLookUp(
+    "State", "tblCensus", "ID=" & [tbltempCustomers.CensusNum]
+  ) AS Expr2,
   Mid(
     Int(
       Rnd([Num])* 999999
@@ -39,4 +43,14 @@ SELECT
   ) AS Expr8
 FROM
   tblTempCustomers
-  INNER JOIN tblNumbers ON tblTempCustomers.ID = tblNumbers.Num;
+  INNER JOIN tblNumbers ON tblTempCustomers.ID = tblNumbers.Num
+WHERE
+  (
+    (
+      (
+        DLookUp(
+          "City", "tblCensus", "ID=" & [tbltempCustomers.CensusNum]
+        )
+      )<> "Balance of" & " AND NAME"
+    )
+  );
