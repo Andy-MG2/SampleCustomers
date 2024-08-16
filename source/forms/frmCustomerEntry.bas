@@ -16,7 +16,7 @@ Begin Form
     Width =8040
     DatasheetFontHeight =11
     ItemSuffix =32
-    Right =15195
+    Right =15975
     Bottom =11025
     Filter ="ID=69"
     RecSrcDt = Begin
@@ -24,6 +24,7 @@ Begin Form
     End
     RecordSource ="tblCustomers"
     DatasheetFontName ="Calibri"
+    OnLoad ="[Event Procedure]"
     FilterOnLoad =0
     ShowPageMargins =0
     DisplayOnSharePointSite =1

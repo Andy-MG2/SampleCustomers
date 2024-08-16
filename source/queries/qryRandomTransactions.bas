@@ -1,6 +1,7 @@
 ﻿Operation =3
 Name ="tblTransactions"
-Option =0
+Option =16
+RowCount ="5"
 Begin InputTables
     Name ="tblNumbers"
 End
@@ -82,12 +83,12 @@ Begin
     State =0
     Left =0
     Top =0
-    Right =1065
+    Right =682
     Bottom =752
     Left =-1
     Top =-1
-    Right =1049
-    Bottom =405
+    Right =666
+    Bottom =371
     Left =0
     Top =0
     ColumnsShown =651

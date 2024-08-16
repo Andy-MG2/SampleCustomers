@@ -3,7 +3,7 @@
   City, State, Zip, Email, Phone
 )
 SELECT
-  tblTempCustomers.cName,
+  TOP 5 tblTempCustomers.cName,
   tblTempCustomers.cLName,
   Int(
     Rnd([Num])* 999

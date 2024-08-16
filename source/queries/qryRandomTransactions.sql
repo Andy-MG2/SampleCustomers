@@ -1,6 +1,6 @@
 ﻿INSERT INTO tblTransactions (CustomerID, Subtotal, Tax, TDate)
 SELECT
-  Int(
+  TOP 5 Int(
     Rnd([Num])* DCount("ID", "tblCustomers")
   ) AS Expr1,
   1000 * Rnd([Num]) AS Expr2,

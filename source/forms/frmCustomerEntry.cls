@@ -79,6 +79,13 @@ Private Sub btnNew_Click()
 End Sub
 
 Private Sub btnRandom_Click()
+    Me.AllowEdits = True
+    Me.AllowDeletions = True
+    Me.btnClose.SetFocus
+    btnEdit.Visible = False
+    btnSave.Visible = True
+    lblMode.Caption = "Editing"
+
     Dim rstNames As Recordset
     Dim rstStates As Recordset
 
@@ -96,6 +103,8 @@ Private Sub btnRandom_Click()
 
     txtEmail = Left(txtName, 4) & "@gmail.com"
     txtPhone = GetRandomPhone()
+
+
 
 End Sub
 
@@ -175,7 +184,7 @@ Private Function GetRandomCity(State As String)
     Set rstCities = CurrentDb.OpenRecordset("" & _
     "SELECT DISTINCT City, State " & _
     "FROM tblCensus " & _
-    "WHERE State='" & State & "' and City NOT LIKE 'Balance of*';" _
+    "WHERE StateFull='" & State & "' and City NOT LIKE 'Balance of*';" _
     , dbOpenDynaset)
 
     rstCities.MoveLast
@@ -196,3 +205,12 @@ Private Function GetRandomCity(State As String)
     GetRandomCity = rstCities!City
 
 End Function
+
+Private Sub Form_Load()
+    Me.AllowEdits = True
+    Me.AllowDeletions = True
+    Me.btnClose.SetFocus
+    btnEdit.Visible = False
+    btnSave.Visible = True
+    lblMode.Caption = "Editing"
+End Sub

@@ -1,6 +1,8 @@
 ﻿Attribute VB_Name = "Globals"
 Option Compare Database
+
 Option Explicit
+Public cusEdit As Boolean
 
 Public Function GenCity(State As String, Num As Integer)
     Dim cityValue As String

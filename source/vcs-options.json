@@ -42,24 +42,6 @@
     "SanitizeLevel": 2,
     "ExtractThemeFiles": false,
     "TablesToExportData": {
-      "tblCensus": {
-        "Format": "Tab Delimited"
-      },
-      "tblNames": {
-        "Format": "Tab Delimited"
-      },
-      "tblNumbers": {
-        "Format": "Tab Delimited"
-      },
-      "tblRoadTypes": {
-        "Format": "Tab Delimited"
-      },
-      "tblStates": {
-        "Format": "Tab Delimited"
-      },
-      "tblStatesCities": {
-        "Format": "Tab Delimited"
-      },
       "USysRegInfo": {
         "Format": "Tab Delimited"
       },

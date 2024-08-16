@@ -82,41 +82,17 @@ Begin
         dbText "Name" ="tblCustomers.Zip"
         dbLong "AggregateType" ="-1"
     End
-    Begin
-        dbText "Name" ="Total"
-        dbLong "AggregateType" ="-1"
-    End
-    Begin
-        dbText "Name" ="Expr1008"
-        dbLong "AggregateType" ="-1"
-    End
-    Begin
-        dbText "Name" ="Subtotal"
-        dbLong "AggregateType" ="-1"
-    End
-    Begin
-        dbText "Name" ="Tax"
-        dbLong "AggregateType" ="-1"
-    End
-    Begin
-        dbText "Name" ="ID"
-        dbLong "AggregateType" ="-1"
-    End
-    Begin
-        dbText "Name" ="TDate"
-        dbLong "AggregateType" ="-1"
-    End
 End
 Begin
     State =0
     Left =0
     Top =0
-    Right =682
+    Right =1065
     Bottom =752
     Left =-1
     Top =-1
-    Right =666
-    Bottom =388
+    Right =1049
+    Bottom =371
     Left =0
     Top =0
     ColumnsShown =539

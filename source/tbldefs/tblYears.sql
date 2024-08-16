@@ -1,0 +1,3 @@
+﻿CREATE TABLE [tblYears] (
+  [tYear] LONG CONSTRAINT [PrimaryKey] PRIMARY KEY UNIQUE NOT NULL
+)
